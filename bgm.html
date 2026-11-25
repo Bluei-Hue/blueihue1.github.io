@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+    <title>My Website</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-size: 120%;
+              }	
+              
+        button {
+            background-color: #383330;
+            color: white;
+            width: 200px;
+            padding: 10px 30px;
+         }
+         
+    </style>
+</head>
+
+<body>
+
+<!--Audio source-->
+
+<audio id="myAudio_forest">
+  <source src="bgm/bgm_forest.ogg" type="audio/ogg">
+  <source src="bgm/bgm_forest.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio_cafe">
+  <source src="bgm/bgm_cafe.ogg" type="audio/ogg">
+  <source src="bgm/bgm_cafe.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="myAudio_fireplace">
+  <source src="bgm/bgm_fireplace.ogg" type="audio/ogg">
+  <source src="bgm/bgm_fireplace.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<nav style="text-align: center;">
+    <a href="biography.html">Biography</a>
+    <a href="bibliography.html">Bibliography</a>
+    <a href="top10.html">Top 10 Novels</a>
+    <a href="bgm.html">Music Room</a>
+</nav>
+    
+    <h1 style="text-align: center;">Music Room</h1>
+    <p style="text-align: center;">Pick your choice of ambience sound to listen to while you read.</p>
+    
+    <p style="text-align: center;">
+	<img width="250" src="image/gramophome.jpg" alt="Gramophome Photo">
+	</p>
+    
+    <p style="text-align: center;">Click the buttons to play or pause the audio.</p>
+
+<!--Buttons to play and pause forest audio-->
+
+    <div style="text-align: center;">
+    <button onclick="playAudio_forest()" type="button">Play Forest Audio</button>
+    <button onclick="pauseAudio_forest()" type="button">Pause Forest Audio</button> 
+    </div>
+    
+    <p></p>
+    
+<!--Buttons to play and pause cafe audio-->
+    
+    <div style="text-align: center;">
+    <button onclick="playAudio_cafe()" type="button">Play Cafe Audio</button>
+    <button onclick="pauseAudio_cafe()" type="button">Pause Cafe Audio</button>
+    </div>
+
+    <p></p>
+
+<!--Buttons to play and pause fireplace audio-->
+
+    <div style="text-align: center;">
+    <button onclick="playAudio_fireplace()" type="button">Play Fireplace Audio</button>
+    <button onclick="pauseAudio_fireplace()" type="button">Pause Fireplace Audio</button>
+    </div>
+
+    <p></p>
+    
+<!--Script for play and pause audio buttons-->
+<!--Audio will loop until paused-->
+
+<script>
+var x = document.getElementById("myAudio_forest"); 
+var y = document.getElementById("myAudio_cafe"); 
+var z = document.getElementById("myAudio_fireplace"); 
+
+function playAudio_forest() { 
+  x.loop = true;
+  x.load();
+  x.play();
+} 
+
+function pauseAudio_forest() { 
+  x.pause(); 
+} 
+
+function playAudio_cafe() { 
+  y.loop = true;
+  y.load();
+  y.play();
+} 
+
+function pauseAudio_cafe() { 
+  y.pause(); 
+} 
+
+function playAudio_fireplace() { 
+  z.loop = true;
+  z.load();
+  z.play();
+} 
+
+function pauseAudio_fireplace() { 
+  z.pause(); 
+} 
+
+</script>  
+    
+</body>
+
+</html>
+    
